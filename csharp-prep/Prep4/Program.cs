@@ -70,9 +70,19 @@ class Program
                     
                 }
 
+                
+
 
                 Console.WriteLine($"The largest number is: {bigNum}");
-                Console.WriteLine($"The smallest positive number is : {smallPositive} ");              
+                Console.WriteLine($"The smallest positive number is : {smallPositive} ");
+
+                //Sorting the list
+                numList.Sort();
+                Console.WriteLine("The sorted list is: ");
+                foreach (int num in numList)
+                {
+                    Console.WriteLine(num);
+                }              
                 exit = 2;
             }
             
