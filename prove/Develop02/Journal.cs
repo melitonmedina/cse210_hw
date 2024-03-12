@@ -13,8 +13,11 @@ public class Journal
 
 
     // Add entery method
-    public void AddEntry(Entry newEntry)
+    public void AddEntry( Entry newEntry, int index)
     {
+
+        _entries.Add(newEntry);
+       //Console.WriteLine(newEntry._date);
 
 
     }
@@ -22,6 +25,13 @@ public class Journal
 
     public void DisplayAll()
     {
+        
+        foreach (Entry entry in _entries)
+        {
+
+            entry.DisplayEntry();
+            
+        }
 
 
 

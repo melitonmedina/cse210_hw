@@ -4,12 +4,14 @@ using System;
 
 public class Entry
 {
-    string _date = "";
-    string _prompt = "";
-    string _entryText = "";
+    public string _date = "";
+    public string _prompt = "";
+    public string _entryText = "";
 
     public void DisplayEntry()
     {
+
+        Console.WriteLine($"Date: {_date} - {_prompt}\n{_entryText}\n");
 
 
 
