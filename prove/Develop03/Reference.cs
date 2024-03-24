@@ -33,8 +33,19 @@ public class Reference
 
     public string GetDisplay()
     {
+        string fullReference = "";
+        if (_endVerse == 1200)
+        {
+            fullReference = $"{_book} {_chapter}: {_verse}";
 
-        return "";
+        }
+        else
+        {
+            fullReference = $"{_book} {_chapter}: {_verse}-{_endVerse}";
+        }
+
+
+        return fullReference;
     }
 
 
