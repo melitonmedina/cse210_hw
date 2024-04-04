@@ -2,7 +2,7 @@ public class SimpleGoal : Goal
 {
     private bool _isComplete;
 
-    public SimpleGoal( string name, string description, int points) : base(name, description, points)
+    public SimpleGoal(string type, string name, string description, string points) : base(type, name, description, points)
     {
 
 
@@ -10,16 +10,26 @@ public class SimpleGoal : Goal
 
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        _pointsAdder += int.Parse(_points);
+        _isComplete = true;       
     }
 
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return _isComplete;
     }
 
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        string representation = "";
+        if (_isComplete)
+        {
+            representation = ($"[x] {_shortName} ({_description})");       
+        }
+        else
+        {
+            representation = ($"[] {_shortName} ({_description})"); 
+        }
+        return representation;
     }
 }

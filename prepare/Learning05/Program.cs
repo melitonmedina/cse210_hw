@@ -8,11 +8,12 @@ class Program
         Square sqr1 = new Square("red", 12.5);
         Circle crl1 = new Circle("blue", 7.0);
         Rectangle rect1 = new Rectangle("brown", 10.7, 5.5);
-        List<Shape> shapes = new List<Shape>();
+        //List<Shape> shapes = new List<Shape>();
+        List<Shape> shapes = [sqr1, crl1, rect1]; // simplified version to add to a list
 
-        shapes.Add(sqr1);
-        shapes.Add(crl1);
-        shapes.Add(rect1);
+        // shapes.Add(sqr1);
+        // shapes.Add(crl1);
+        // shapes.Add(rect1);
 
         foreach (Shape s in shapes)
         {
