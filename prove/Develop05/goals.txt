@@ -1,0 +1,4 @@
+1475
+Simple Goal:Run~~Run three miles~~50~~True
+Eternal Goal:Serve~~As much as possible~~100
+Checklist Goal:Programming~~Learn new languages~~75~~3~~1000~~3

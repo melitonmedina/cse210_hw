@@ -7,20 +7,42 @@ public class EternalGoal : Goal
 
     }
 
-    public override string GetStringRepresentation()
+
+    public override string GetStringRepresentation(bool saveToFile)
     {
+        string representation = "";
+        if (!saveToFile)
+        {
+            representation = $"[ ] {_shortName} ({_description})";  
+        }
+
+
+        else
+        {
+             representation = $"{_type}:{_shortName}~~{_description}~~{_points}";
+        }
+         
         
-        return "";
+        return representation;
     }
 
     public override bool IsComplete()
     {
         
-        return true;
+        return false;
     }
 
     public override void RecordEvent()
     {
-
+        //_pointsAdder += int.Parse(_points);
     }
+
+
+    
+    public override int GetPointsAdder()
+    {
+        _pointsAdder = _points;
+        return _pointsAdder;
+    }
+
 }
