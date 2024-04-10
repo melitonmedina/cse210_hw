@@ -20,6 +20,7 @@ class Program
         Order order2 = new Order(new Customer("Micro Stamping, LC", new Address("2235 Main Rd.", "Elizabeth", "NJ", "USA")));
         order2.AddProduct("Large scisors", "L12", 25.99, 35);
         order2.AddProduct("Medium scisors", "M10", 52.50, 45);
+        order2.AddProduct("Small scisors", "S03", 37.50, 15);
         string packingLabel2 = order2.GetPackingLabel();
         string shippingLabel2 = order2.GetShippingLabel();
         double totalPrice2 = order2.CalculateTotalPrice();
