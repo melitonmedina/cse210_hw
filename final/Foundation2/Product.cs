@@ -21,6 +21,26 @@ public class Product
     }
 
 
+    public string GetProductName()
+    {
+        return _productName;
+    }
 
 
+    public string GetProductId()
+    {
+        return _productId;
+    }
+
+
+    public int GetQuantity()
+    {
+        return _quantity;
+    }
+
+
+    public double GetPrice()
+    {
+        return _price;
+    }
 }

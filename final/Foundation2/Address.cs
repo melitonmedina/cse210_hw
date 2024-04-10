@@ -14,7 +14,7 @@ public class Address
 
     }
 
-    public string DisplayAddress()
+    public string GetAddress()
     {
         string address = $"{_street}\n{_city}, {_stateProvidence}\n{_country}";
 

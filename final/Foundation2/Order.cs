@@ -18,7 +18,7 @@ public class Order
     }
 
 
-    public void CalculateTotalPrice()
+    public double CalculateTotalPrice()
     {
         if (_customer.IsBasedInUSA())
         {
@@ -36,13 +36,39 @@ public class Order
             _totalOrderPrice += prd.ComputeCost();
         }
 
-        _totalOrderPrice += _shippingCost;
+        return _totalOrderPrice += _shippingCost;
     }
 
 
     public void DisplayTotalOrderPrice()
     {
         CalculateTotalPrice();
-        Console.WriteLine($"The total order price is {_totalOrderPrice}");
+        Console.WriteLine($"The total order price is {Math.Round(_totalOrderPrice, 2)}");
+    }
+
+
+    public string GetPackingLabel()
+    {
+        List<string> packing = new List<string>();
+        
+       int i = 0; 
+       foreach (Product prd in _products)
+       {
+            // string productName = 
+            packing.Add($"{i + 1}.{prd.GetProductName()} - ID: {prd.GetProductId()}");
+            i +=1;
+       }
+       string [] packingArray = packing.ToArray();
+       string packingLabel = string.Join("\n", packingArray);
+
+       return "Product:\n" + packingLabel;
+    }
+
+
+    public string GetShippingLabel()
+    {
+        string shippingLabel = $"Customer:{_customer.GetCostumerName()}\nAddress:\n{_customer.GetAddress()}";
+        return shippingLabel;
+
     }
 }

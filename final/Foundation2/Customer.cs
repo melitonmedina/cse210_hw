@@ -17,4 +17,15 @@ public class Customer
         _isLocationUSA = _address.IsBasedInUSA();
         return _isLocationUSA;
     }
+
+
+    public string GetCostumerName()
+    {
+        return _customerName;
+    }
+
+    public string GetAddress()
+    {
+        return _address.GetAddress();
+    }
 }
